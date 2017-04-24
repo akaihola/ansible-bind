@@ -86,9 +86,12 @@ Set `bind_create_slave_from_master` to create a slave with not having to define 
 ```yaml
 bind_create_slave_from_master:
   - master: 'master-ns'
-  - master_address:
+    master_address:
     - 10.100.2.20
 ```
+
+Note: To make this work, you need to actually run both the master and slave hosts in the same playbook run. If you need a different sudo password for both, store them in `host_vars/` vaults for each host.
+
 ## Dependencies
 
 None.
